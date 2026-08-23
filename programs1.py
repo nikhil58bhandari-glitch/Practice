@@ -54,6 +54,7 @@ import numbers
 #     print("this is not a leap year...")
 
     # Q5 -> sum of all natural number-:
+
 # number = int(input("Enter the number upto-: "))
 # sum = 0
 # for i in range(number+1):
@@ -62,6 +63,7 @@ import numbers
 
 
      #  Q6 -> factorial of a numbers
+
 # number = int(input("Enter the number which you want to find out factorial-: "))
 # factorial = 1
 # for i in range(1, number + 1):
@@ -84,17 +86,35 @@ import numbers
 
       #  Q8-> Prime Numbers in Intervale -:
 
-start = int(input("Enter the First Number-: "))
-end =  int(input("Enter the last Number-: "))
+# start = int(input("Enter the First Number-: "))
+# end =  int(input("Enter the last Number-: "))
+#
+# def inPrime(n):
+#     if n < 2:
+#         return False
+#
+#     for i in range(2 , (n // 2) + 1):
+#         if n % i == 0:
+#             return False
+#     return True
+#
+# for i in range(start, end + 1):
+#     if inPrime(i):
+#         print(i, end="  ")
 
-def inPrime(n):
-    for i in range(2 , (n // 2) + 1):
-        if n % i == 0:
-            return False
-        return True
 
-for i in range(start, end + 1):
-    if inPrime(i):
-        print(i, end="  ")
+      # Q9-> Fibonacci Series
 
 
+
+def fibbonacci(n):
+    if n == 0 :
+        return 0
+    if n == 1:
+        return 1
+
+    else:
+        return fibbonacci(n-1) + fibbonacci(n - 2)
+
+for i in range(10):
+        print(fibbonacci(i ), end = " ")
