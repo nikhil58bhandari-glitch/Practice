@@ -61,22 +61,40 @@ import numbers
 # print("sum is:",sum)
 
 
-     #  Q6 -> factorial of a number
+     #  Q6 -> factorial of a numbers
 # number = int(input("Enter the number which you want to find out factorial-: "))
 # factorial = 1
 # for i in range(1, number + 1):
 #     factorial = factorial * i
 # print(factorial)
 
-   #  Q7-> prime number -:
-num = int(input("Enter the numbre-: "))
+   #  Q7-> Prime Number -:
+# num = int(input("Enter the Number-: "))
+#
+# if num < 2:
+#     print("the numbers is not a prime number")
+# else:
+#     for i in range(2,num  ):
+#         if num % i == 0:
+#             print(f"{num} is not a prime number")
+#             break
+#     else:
+#             print(f"{num} is a prime number")
 
-if num < 2:
-    print("the numbers is not a prime number")
-else:
-    for i in range(2,num  ):
-        if num % i == 0:
-            print(f"{num} is not a prime number")
-            break
-    else:
-            print(f"{num} is a prime number")
+
+      #  Q8-> Prime Numbers in Intervale -:
+
+start = int(input("Enter the First Number-: "))
+end =  int(input("Enter the last Number-: "))
+
+def inPrime(n):
+    for i in range(2 , (n // 2) + 1):
+        if n % i == 0:
+            return False
+        return True
+
+for i in range(start, end + 1):
+    if inPrime(i):
+        print(i, end="  ")
+
+
