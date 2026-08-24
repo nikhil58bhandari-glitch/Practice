@@ -136,4 +136,24 @@ import numbers
 #     print(f"{num} is not an Armstrong number")
 
 
+         # Q11-> Armstrong Number in an interval-:
+
+start = int(input("Enter the start Number : "))
+stop = int(input("Enter the Stop Number :  "))
+
+for num in range(start, stop + 1):
+    temp = num
+    total_digit = len(str(num))
+    sum = 0
+
+    while temp > 0:
+        current_digit = temp % 10
+        sum = sum + current_digit ** total_digit
+        temp = temp // 10
+
+    if num == sum:
+        print(num, end=" ")
+
+
+
 
