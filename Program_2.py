@@ -12,7 +12,33 @@
 
     # Q2-> Find Numbers divisible by another number
 
-num = int(input("Enter Number : "))
-upto = int(input("Enter a number upto we have to check : "))
-Division = list(filter(lambda x : x % num == 0, list(range(1, upto + 1))))
-print(f"The list of numbers which is divisible by {num} are {Division}")
+# num = int(input("Enter Number : "))
+# upto = int(input("Enter a number upto we have to check : "))
+# Division = list(filter(lambda x : x % num == 0, list(range(1, upto + 1))))
+# print(f"The list of numbers which is divisible by {num} are {Division}")
+
+     # Q3 -> Reverse Numbers -:
+
+# num = int(input("enter the Number : "))
+# print(int(str(num)[::-1]))
+#
+# num = int(input("enter the Number : "))
+# rev_num = 0
+#
+# while num > 0:
+#     rem = num % 10
+#     rev_num = rem + (rev_num * 10)
+#     num = num // 10
+# print(rev_num)
+
+     # Q4-> Count Number of digit in number
+
+num = int(input("Enter a number : "))
+print(len(str(num)))
+
+num = int(input("Enter a number : "))
+count = 0
+while num > 0:
+    num = num // 10
+    count = count + 1
+print(count)
