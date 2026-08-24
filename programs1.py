@@ -105,16 +105,35 @@ import numbers
 
       # Q9-> Fibonacci Series
 
+# def fibbonacci(n):
+#     if n == 0 :
+#         return 0
+#     if n == 1:
+#         return 1
+#
+#     else:
+#         return fibbonacci(n-1) + fibbonacci(n - 2)
+#
+# for i in range(10):
+#         print(fibbonacci(i ), end = " ")
+
+    # Q10-> Armstrong Number-:
+
+# num = int(input("Enter the Number -: "))
+#
+# temp = num
+# total_digits = len(str(num))
+# sum = 0
+#
+# while temp > 0:
+#     current_digit = temp  % 10
+#     sum = sum + current_digit ** total_digits
+#     temp = temp // 10
+#
+# if sum == num:
+#     print(f"{num} is an Armstrong number")
+# else:
+#     print(f"{num} is not an Armstrong number")
 
 
-def fibbonacci(n):
-    if n == 0 :
-        return 0
-    if n == 1:
-        return 1
 
-    else:
-        return fibbonacci(n-1) + fibbonacci(n - 2)
-
-for i in range(10):
-        print(fibbonacci(i ), end = " ")
