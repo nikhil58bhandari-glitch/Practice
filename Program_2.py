@@ -46,8 +46,8 @@
      #  Q5-> Find HCF or GCD -:
     # (Highest Common Factor / Greatest Common factor)
 
-num1 =int(input("Enter thr Number : "))
-num2 = int(input("Enter the Number : "))
+# num1 =int(input("Enter thr Number : "))
+# num2 = int(input("Enter the Number : "))
 
 # while num2 != 0:
 #     rem = num1 % num2
@@ -56,8 +56,25 @@ num2 = int(input("Enter the Number : "))
 #
 # print("HCF-: ", num1 )
 
-def Hcf(num1, num2):
- while num2:
-    num1 , num2 = num2 , num1 % num2
- return num1
-print(Hcf(num1,num2))
+# def Hcf(num1, num2):
+#  while num2:
+#     num1 , num2 = num2 , num1 % num2
+#  return num1
+# print(Hcf(num1,num2))
+
+       # find LCM -:
+
+a = int(input("Enter the Number : "))
+b = int(input("Enter the number : "))
+
+def hcf(a,b):
+    while b:
+     a , b = b, a % b
+    return a
+print(hcf(a,b))
+
+def lcm(a,b):
+    return (a * b) // hcf(a,b)
+
+print(lcm(a,b))
+
