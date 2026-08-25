@@ -33,12 +33,31 @@
 
      # Q4-> Count Number of digit in number
 
-num = int(input("Enter a number : "))
-print(len(str(num)))
+# num = int(input("Enter a number : "))
+# print(len(str(num)))
+#
+# num = int(input("Enter a number : "))
+# count = 0
+# while num > 0:
+#     num = num // 10
+#     count = count + 1
+# print(count)
 
-num = int(input("Enter a number : "))
-count = 0
-while num > 0:
-    num = num // 10
-    count = count + 1
-print(count)
+     #  Q5-> Find HCF or GCD -:
+    # (Highest Common Factor / Greatest Common factor)
+
+num1 =int(input("Enter thr Number : "))
+num2 = int(input("Enter the Number : "))
+
+# while num2 != 0:
+#     rem = num1 % num2
+#     num1 = num2
+#     num2 = rem
+#
+# print("HCF-: ", num1 )
+
+def Hcf(num1, num2):
+ while num2:
+    num1 , num2 = num2 , num1 % num2
+ return num1
+print(Hcf(num1,num2))
