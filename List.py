@@ -49,3 +49,9 @@ print(list1)
 str1 = ['n','i','k','h','i','l']
 str2 = ['b','h','a','n','d','a','r','i']
 print('_'.join(str1 +str2))
+
+     # Q7-> Split a list into evenly sized chunks-:
+
+size = 2
+lists = [list1[i : i + size] for i in range(0, len(list1), size)]
+print(lists)
