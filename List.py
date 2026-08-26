@@ -1,19 +1,51 @@
       # Q1-> Check if list is empty -:
 
-list1 = [21,3,42,44,65,2,1,22]
-list2 = []
+# list1 = [21,3,42,44,65,2,1,22]
+# list2 = []
+#
+# if len(list1) == 0:
+#     print("list1 is empty")
+# else:
+#     print(f"list1 has {len(list1)} elements")
+#
+# if not list2:
+#     print("list2 is empty")
 
-if len(list1) == 0:
-    print("list1 is empty")
-else:
-    print(f"list1 has {len(list1)} elements")
 
-if not list2:
-    print("list2 is empty")
+       # Q2-> Get the Last Element of the list -:
+
+# list1 = [43,4,3,6,8,7,6]
+# print(list1[len(list1) - 1])
+# print(list1 [- 1])
 
 
-       # Q2 -> Get the Last Element of the list -:
+      # Q3-> Index of list using For Loop -:
 
-list1 = [43,4,3,6,8,7,6]
-print(list1[len(list1) - 1])
-print(list1 [- 1])
+# list1 = [1,2,3,4,5,6,7,8]
+# for i in list1:
+#     index = list1.index(i)
+#     print(index, "index is-:",i)
+
+
+     # Q4-> Count the occurance of the item in list -:
+
+list1 = [2,3,3,3,2,2,3,4,35,2,2,45,6]
+print(list1.count(3))    # count method
+
+     # Q5-> Slice list -:
+
+print(list1[:3])  # Get first three item
+print(list1[-3:]) # get the last three item
+print(list1[ 1::2])  # get every item starting from the second item
+print(list1[::-1])   # get the reverse list
+
+    # Q6-> Concatenate Two list -:
+
+list2 = [10,20,30,40,5-0,60,70,80,90]
+# print(list1 + list2)
+list1.extend(list2)
+print(list1)
+
+str1 = ['n','i','k','h','i','l']
+str2 = ['b','h','a','n','d','a','r','i']
+print('_'.join(str1 +str2))
