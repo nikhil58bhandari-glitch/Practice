@@ -29,29 +29,43 @@
 
      # Q4-> Count the occurance of the item in list -:
 
-list1 = [2,3,3,3,2,2,3,4,35,2,2,45,6]
-print(list1.count(3))    # count method
+# list1 = [2,3,3,3,2,2,3,4,35,2,2,45,6]
+# print(list1.count(3))    # count method
 
      # Q5-> Slice list -:
 
-print(list1[:3])  # Get first three item
-print(list1[-3:]) # get the last three item
-print(list1[ 1::2])  # get every item starting from the second item
-print(list1[::-1])   # get the reverse list
+# print(list1[:3])  # Get first three item
+# print(list1[-3:]) # get the last three item
+# print(list1[ 1::2])  # get every item starting from the second item
+# print(list1[::-1])   # get the reverse list
 
     # Q6-> Concatenate Two list -:
 
-list2 = [10,20,30,40,5-0,60,70,80,90]
+# list2 = [10,20,30,40,5-0,60,70,80,90]
 # print(list1 + list2)
-list1.extend(list2)
-print(list1)
-
-str1 = ['n','i','k','h','i','l']
-str2 = ['b','h','a','n','d','a','r','i']
-print('_'.join(str1 +str2))
+# list1.extend(list2)
+# print(list1)
+#
+# str1 = ['n','i','k','h','i','l']
+# str2 = ['b','h','a','n','d','a','r','i']
+# print('_'.join(str1 +str2))
 
      # Q7-> Split a list into evenly sized chunks-:
 
-size = 2
-lists = [list1[i : i + size] for i in range(0, len(list1), size)]
-print(lists)
+# size = 2
+# lists = [list1[i : i + size] for i in range(0, len(list1), size)]
+# print(lists)
+
+    # Q8-> Flattened list from nested list-:
+
+# nested_list = [0.1,0.2,[3.1,4.2,[5,6,[70,80,[900,1000]]]]]
+#
+# def flattened(num):
+#     flattened_list = []
+#     for i in num:
+#         if isinstance(i , list):
+#             flattened_list.extend (flattened(i))
+#         else:
+#             flattened_list.append(i)
+#     return flattened_list
+# print(flattened(nested_list))
