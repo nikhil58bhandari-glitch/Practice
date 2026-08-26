@@ -64,19 +64,19 @@
 
        # find LCM -:
 
-# a = int(input("Enter the Number : "))
-# b = int(input("Enter the number : "))
-#
-# def hcf(a,b):
-#     while b:
-#      a , b = b, a % b
-#     return a
-# print(hcf(a,b))
-#
-# def lcm(a,b):
-#     return (a * b) // hcf(a,b)
-#
-# print(lcm(a,b))
+a = int(input("Enter the Number : "))
+b = int(input("Enter the number : "))
+
+def hcf(a,b):
+    while b:
+     a , b = b, a % b
+    return a
+print(hcf(a,b))
+
+def lcm(a,b):
+    return (a * b) // hcf(a,b)
+
+print(lcm(a,b))
 
 
 
