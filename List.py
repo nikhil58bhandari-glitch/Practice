@@ -58,14 +58,34 @@
 
     # Q8-> Flattened list from nested list-:
 
-# nested_list = [0.1,0.2,[3.1,4.2,[5,6,[70,80,[900,1000]]]]]
-#
-# def flattened(num):
-#     flattened_list = []
-#     for i in num:
-#         if isinstance(i , list):
-#             flattened_list.extend (flattened(i))
-#         else:
-#             flattened_list.append(i)
-#     return flattened_list
-# print(flattened(nested_list))
+nested_list = [0.1,0.2,[3.1,4.2,[5,6,[70,80,[900,1000]]]]]
+def flattened(num):
+    flattened_list = []
+    for i in num:
+        if isinstance(i , list):
+            flattened_list.extend (flattened(i))
+        else:
+            flattened_list.append(i)
+    return flattened_list
+print(flattened(nested_list))
+
+    # Q9-> Iterate through two lists in parallel-:
+
+list1 = [1,2,3,4]
+list2 = list1[::-1]
+
+for  i ,j in zip(list1,list2):
+    print(i,j)
+
+
+    # Q10-> Remove Duplicates :
+
+my_list =[1,2,3,3,23,4,3,5,56,6,4,3,244,142,4,3,4]
+print(list(set(my_list)))
+
+new_list = []
+for i in my_list:
+    if i  not in new_list:
+        new_list.append(i)
+new_list.sort()
+print(new_list)
