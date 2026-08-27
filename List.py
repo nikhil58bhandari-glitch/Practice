@@ -80,23 +80,23 @@
 
     # Q10-> Remove Duplicates :
 
-# my_list =[1,2,3,4,5,6,7,7,6,5,4,3,2,1]
-# print(list(set(my_list)))
-#
-# new_list = []
-# for i in my_list:
-#     if i  not in new_list:
-#         new_list.append(i)
-# new_list.sort()   # it sort the list
-# print(new_list)
-#
-# new_list = [1,2,3,4,5,6,7,8]
-# print(f"actual list {new_list}")
-# del new_list[3]  # delete the 3rd index item
-# print(f"delete list {new_list}")
-# new_list.remove(6)  # remove element which we passed as an argument
-# print(f"remove the item {new_list}")
-# new_list.pop(2)   # pop item in 2nd index
-# print(f"pop item {new_list}")
+my_list =[1,2,3,4,5,6,7,7,6,5,4,3,2,1]
+print(list(set(my_list)))
+
+new_list = []
+for i in my_list:
+    if i  not in new_list:
+        new_list.append(i)
+new_list.sort()   # it sort the list
+print(new_list)
+
+new_list = [1,2,3,4,5,6,7,8]
+print(f"actual list {new_list}")
+del new_list[3]  # delete the 3rd index item
+print(f"delete list {new_list}")
+new_list.remove(6)  # remove element which we passed as an argument
+print(f"remove the item {new_list}")
+new_list.pop(2)   # pop item in 2nd index
+print(f"pop item {new_list}")
 
 
