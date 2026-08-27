@@ -40,18 +40,51 @@
 
     # Q2-> Transpose a Matrix -:
 
-matrix = [[1, 2, 3],
-          [4, 5, 6],
-          [7, 8, 9,]
+# matrix = [[1, 2, 3],
+#           [4, 5, 6],
+#           [7, 8, 9,]
+#           ]
+#
+# transport = []
+# for i in range(len(matrix[0])):
+#     row = []
+#     for j in range(len(matrix)):
+#         row.append(matrix[j][i])
+#     transport.append(row)
+#
+# print('transport Matrix : ')
+# for row in transport:
+#     print(row)
+#
+
+
+
+     # Q3-> Multiply two matrices -:
+
+matrix1  = [[1,2,3],
+          [4,5,6],
+          [3,4,5]
           ]
+matrix2 = [[2,3,4],
+           [4,5,3],
+           [9,8,3]
+           ]
 
-transport = []
-for i in range(len(matrix[0])):
+
+mul = []
+for i in range(len(matrix1)):
     row = []
-    for j in range(len(matrix)):
-        row.append(matrix[j][i])
-    transport.append(row)
+    for j in range(len(matrix2[0])):
+        row .append(0)
+    mul.append(row)
 
-print('transport Matrix : ')
-for row in transport:
+
+
+for i in range(len(matrix1)):
+    for j in range(len(matrix2[0])):
+        for k in range(len(matrix2)):
+            mul[i][j] = mul[i][j] +matrix1[i][k] * matrix2[k][j]
+for row in mul:
     print(row)
+
+
