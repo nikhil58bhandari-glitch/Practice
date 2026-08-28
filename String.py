@@ -29,16 +29,36 @@
 
      # Q3-> Ascii value of a character -:
 
-character  = input("Enter the character -: ")
-ascii_value = ord(character)     # ord() gives the Unicode number of a character
-chr_value = chr(ascii_value)     # chr() does the opposite of ord().
-print(f'Unicode value of {chr_value} is {ascii_value}')
+# character  = input("Enter the character -: ")
+# ascii_value = ord(character)     # ord() gives the Unicode number of a character
+# chr_value = chr(ascii_value)     # chr() does the opposite of ord().
+# print(f'Unicode value of {chr_value} is {ascii_value}')
 
 
     # Q4-> String is Palindrome or not -:
 
-string = input("Enter the String -: ")
-if string == string[::-1]:
-    print("String is Palindrome")
-else:
-    print("Not Palindrome")
+# string = input("Enter the String -: ")
+# if string == string[::-1]:
+#     print("String is Palindrome")
+# else:
+#     print("Not Palindrome")
+
+
+   # Q5-: count the number of each vowel-:
+
+words = input("Enter the String -: ").upper()
+A = E = I = O = U = 0
+for i in words:
+    if i == 'A':
+      A += 1
+    elif i == 'E':
+        E += 1
+    elif i == 'I':
+        I += 1
+    elif i == 'O':
+        O += 1
+    elif i == 'U':
+        U += 1
+    else:
+        pass
+print(f"A = {A} E = {E} I = {I} O = {O} U = {U}")
