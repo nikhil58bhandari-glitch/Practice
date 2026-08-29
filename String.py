@@ -146,25 +146,51 @@
 
     # Q11-> Check if string is a Number(float)
 
-def is_num(input):
-    return isinstance(input,str)   # "Is this value of this particular type?"
+# def is_num(input):
+#     return isinstance(input,str)   # "Is this value of this particular type?"
+#
+# def is_num2(input):
+#     return input.isdigit()      # isdigit() checks whether a string contains only digits.
+#
+# def is_num3(input):
+#     return input.isnumeric()   # isnumeric() is similar to isdigit().
+#
+# def is_num4(input):      # It tries to convert the value into a floating-point number.
+#     try:
+#         float(input)
+#         return True
+#     except:
+#         return False
+#
+# print(is_num('123'))
+# print(is_num('hello'))
+# print(is_num(123))
+# print(is_num2('123'))
+# print(is_num3('123'))
+# print(is_num4('234'))
 
-def is_num2(input):
-    return input.isdigit()      # isdigit() checks whether a string contains only digits.
 
-def is_num3(input):
-    return input.isnumeric()   # isnumeric() is similar to isdigit().
+   # Q12-> count the number of occurance of a character in string-:
 
-def is_num4(input):      # It tries to convert the value into a floating-point number.
-    try:
-        float(input)
-        return True
-    except:
-        return False
+text = 'Hello nikhil bhandari'
+ch = 'i'.lower()
+count = 0
+for i in text:
+    if ch == i:
+        count += 1
+print(count)
 
-print(is_num('123'))
-print(is_num('hello'))
-print(is_num(123))
-print(is_num2('123'))
-print(is_num3('123'))
-print(is_num4('234'))
+print(text.count(ch))
+
+
+import string
+string_input = 'hai! my name is luffy: i wanna become a # king of a pirates!'
+new= str.maketrans('','',string.punctuation)
+string_input = string_input.translate(new)
+print(string_input)
+
+s = ''
+for i in string_input:
+    if i not in string.punctuation:
+        s += i
+print(s)
