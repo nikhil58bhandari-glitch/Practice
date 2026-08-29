@@ -118,27 +118,53 @@
 
    # Q9-: check if two string are anagram-:
 
-string1 = "listen"
-string2 = "silent"
-string1 = string1.replace(' ','').lower()
-string2 = string2.replace(' ','').lower()
-if sorted(string1) == sorted(string2):
-    print("strings are Anagram")
-else:
-    print("not anagram")
+# string1 = "listen"
+# string2 = "silent"
+# string1 = string1.replace(' ','').lower()
+# string2 = string2.replace(' ','').lower()
+# if sorted(string1) == sorted(string2):
+#     print("strings are Anagram")
+# else:
+#     print("not anagram")
 
 
     # Q10-> Capitalise the first character of string-:
 
-text = "hai my name is nikhil. now i am going to create a capitalised text"
-words = text.split()
-text = [word[0].upper() + word[1:] for word in words]
-text = " ".join(text)   # Join all the elements using a space " " between them
-print(text)
+# text = "hai my name is nikhil. now i am going to create a capitalised text"
+# words = text.split()
+# text = [word[0].upper() + word[1:] for word in words]
+# text = " ".join(text)   # Join all the elements using a space " " between them
+# print(text)
+#
+# name = 'one-Piece'
+# print(name[0].upper() + name[1:])
 
-name = 'one-Piece'
-print(name[0].upper() + name[1:])
+# text = "hai my name is nikhil. now i am going to create a capitalised text"
+# print(text.capitalize())    # It makes only the first character of the entire string uppercase.
+# print(text.title())    # It makes the first letter of every word uppercase.
 
-text = "hai my name is nikhil. now i am going to create a capitalised text"
-print(text.capitalize())    # It makes only the first character of the entire string uppercase.
-print(text.title())    # It makes the first letter of every word uppercase.
+
+    # Q11-> Check if string is a Number(float)
+
+def is_num(input):
+    return isinstance(input,str)   # "Is this value of this particular type?"
+
+def is_num2(input):
+    return input.isdigit()      # isdigit() checks whether a string contains only digits.
+
+def is_num3(input):
+    return input.isnumeric()   # isnumeric() is similar to isdigit().
+
+def is_num4(input):      # It tries to convert the value into a floating-point number.
+    try:
+        float(input)
+        return True
+    except:
+        return False
+
+print(is_num('123'))
+print(is_num('hello'))
+print(is_num(123))
+print(is_num2('123'))
+print(is_num3('123'))
+print(is_num4('234'))
