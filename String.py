@@ -94,24 +94,51 @@
 
   # Q7->  Trim Whitespace from a sting -:
 
-string = "Hai sai praveen"
-trim = ''
-for i in string:
-    if i != ' ':
-        trim = trim + i
-print(trim)
-
-string = "            hai sai praveen"
-print(string.strip())
-print(string.rstrip())
-print(string.lstrip())
+# string = "Hai sai praveen"
+# trim = ''
+# for i in string:
+#     if i != ' ':
+#         trim = trim + i
+# print(trim)
+#
+# string = "            hai sai praveen"
+# print(string.strip())
+# print(string.rstrip())
+# print(string.lstrip())
 
 
 
    # Q8-> Convert bytes to string-:
 
-byte_code = b'Hai praveen'
-decode_code = byte_code.decode()
-print(type(byte_code))
-print(type(decode_code))
+# byte_code = b'Hai praveen'
+# decode_code = byte_code.decode()
+# print(type(byte_code))
+# print(type(decode_code))
 
+
+   # Q9-: check if two string are anagram-:
+
+string1 = "listen"
+string2 = "silent"
+string1 = string1.replace(' ','').lower()
+string2 = string2.replace(' ','').lower()
+if sorted(string1) == sorted(string2):
+    print("strings are Anagram")
+else:
+    print("not anagram")
+
+
+    # Q10-> Capitalise the first character of string-:
+
+text = "hai my name is nikhil. now i am going to create a capitalised text"
+words = text.split()
+text = [word[0].upper() + word[1:] for word in words]
+text = " ".join(text)   # Join all the elements using a space " " between them
+print(text)
+
+name = 'one-Piece'
+print(name[0].upper() + name[1:])
+
+text = "hai my name is nikhil. now i am going to create a capitalised text"
+print(text.capitalize())    # It makes only the first character of the entire string uppercase.
+print(text.title())    # It makes the first letter of every word uppercase.
