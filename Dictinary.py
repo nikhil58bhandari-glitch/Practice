@@ -96,6 +96,21 @@ else:
     print(f'{ele} key is not in dictionary')
 
 
+  # Q6-> Delete an item form a dictinaries ->
+
+my_dict = {'A' : 'APPEND', 'B':'BASECLASS', 'C':'CASE SENDER', 'D':'DATE BASE', 'E':'EFFICIENT'}
+del my_dict['B']
+my_dict.pop('E')
+print(my_dict)
 
 
+   # Q7-> Marge Two Dictionaries ->
 
+one = {1:'Luffy', 2 : 'Zoro', 3: 'Nami', 4: 'Usoop', 5: 'Sanji'}
+two = {6:'Choper', 7:'Robin', 8:'Franky', 9 :'Brook', 10: 'Jinbe' }
+
+one.update(two)
+print(one)
+
+merged = {**one, **two}
+print(merged)
