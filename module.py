@@ -49,37 +49,73 @@
 # print(calendar.month(yy, mm))
 
 
-  # math->
-
-import math
-
-print(math.sqrt(25))
-print(math.pow(2,4))
-print(math.factorial(5))
+#   # math->
+#
+# import math
+#
+# print(math.sqrt(25))
+# print(math.pow(2,4))
+# print(math.factorial(5))
 
     # string->
-import string
-print(string.punctuation)
-print(string.ascii_letters)
-print(string.ascii_lowercase)
-print(string.ascii_uppercase)
+# import string
+# print(string.punctuation)
+# print(string.ascii_letters)
+# print(string.ascii_lowercase)
+# print(string.ascii_uppercase)
 
      # datetime->
-import datetime
-print(datetime.datetime.today())
+# import datetime
+# print(datetime.datetime.today())
 
     # os ->
-import os
-print(os.getcwd())     # Get Current Working Directory.
-print(os.listdir())    # to see files/folders in the current directory.
+# import os
+# print(os.getcwd())     # Get Current Working Directory.
+# print(os.listdir())    # to see files/folders in the current directory.
 
     # sys->
-import sys
-sys.stdout.write('hello ')   # sys gives you information and controls related to the Python interpreter/system.
+# import sys
+# sys.stdout.write('hello ')   # sys gives you information and controls related to the Python interpreter/system.
 
      # json->
-import json
-data = '{"name" : "nikhil", "age" : 22}'
-result = json.loads(data)
-print(result['name'])
-print(result)
+# import json
+# data = '{"name" : "nikhil", "age" : 22}'
+# result = json.loads(data)
+# print(result['name'])
+# print(result)
+
+
+   # Represent Enum->
+
+from enum import Enum
+class color(Enum):  # define color enum
+    red = 1
+    green = 2
+    blue = 3
+
+print(color.red)   # Accessing Enum member
+
+print(color.green.value)  # print enum value
+
+for x in color:   # Go through every member inside the Color Enum.
+    print(x)
+
+print(color.red == color.red)
+print(color.red == color.green)
+
+
+
+   # Shuffle deck of cards
+
+import itertools, random
+suits = ['Hearts', 'Diamonds', 'Clubs', 'Spades']
+ranks = ['A','2','3','4','5','6','7','8','9','10','J','Q','K']
+# cards = [(suits, ranks) for suit in suits for rank in ranks]   # It creates every possible combination of:
+cards = []
+# for suit in suits:
+#     for rank in ranks:
+#         cards.append((suit, rank))
+cards = list(itertools.product(suits,ranks)) #  Give me every possible combination of one item from suits and one item from ranks.
+random.shuffle(cards)
+for i in range(5):
+    print(cards[i][0], 'of', cards[i][1])
