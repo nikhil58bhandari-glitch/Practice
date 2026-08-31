@@ -119,3 +119,29 @@ cards = list(itertools.product(suits,ranks)) #  Give me every possible combinati
 random.shuffle(cards)
 for i in range(5):
     print(cards[i][0], 'of', cards[i][1])
+
+
+       # Compute all the permutations of the sting ->
+from itertools import permutations
+text = 'abc'
+letters = permutations(text)   # "Give me every possible ordering of the characters in abc."
+words = [''.join(letter) for letter in letters]
+for word in words:
+    print(word,end=' ')
+
+
+
+    # Creating a countdowns timer -:
+
+import time
+
+def timer(minutes):
+    seconds = minutes * 60
+    while seconds > 0:
+        minutes_remaining = seconds // 60
+        seconds_remaining = seconds % 60
+        print(f'{minutes_remaining:02d} : {seconds_remaining:02d}')
+        time.sleep(1)   # Pause the program for 1 second.
+        seconds -= 1
+    print('time is up!')
+timer(1)
