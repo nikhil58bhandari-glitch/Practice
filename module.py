@@ -145,3 +145,10 @@ def timer(minutes):
         seconds -= 1
     print('time is up!')
 timer(1)
+
+  # Measure the Elapsed time->
+start = time.time()
+time.sleep(3)
+end = time.time()
+elapsed = end - start
+print(f"{elapsed:2f}")
