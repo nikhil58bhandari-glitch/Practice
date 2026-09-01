@@ -88,6 +88,6 @@ print()
 
    # Create an array with value that  are spaced
    # linearly in specified interval ->  ".linespace"
-arr_lin = np.linspace(0,10,num = 5)
+arr_lin = np.linspace(0,20,num = 5)
 print(arr_lin)
 
