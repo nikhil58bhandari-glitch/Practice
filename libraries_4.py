@@ -57,39 +57,69 @@ import numpy as np
 
 #Search->
 
-x = np.array([3,5,7,4,3,4,6,3,6,35,6,34])
-n = np.where( x == 3 )
-print(n)
+# x = np.array([3,5,7,4,3,4,6,3,6,35,6,34])
+# n = np.where( x == 3 )
+# print(n)
+#
+# y = np.array([3,5,7,4,3,4,6,3,6,35,6,34])
+# n1 = np.where( (x/2) == 3 )
+# print(n1)
+#
+# # Search sorted array->
+# a = np.array([3,4,6,7,8,9,10,11,12,15,17,18,21,22])
+#
+# x1 = np.searchsorted( a, 5)
+# print(x1)
+#
+# a = np.array([3,4,6,7,8,9,10,11,12,15,17,18,21,22])
+#
+# x2 = np.searchsorted( a, [6,8,9],side = 'right')
+# print(x2)
+#
+# # sort Array-:
+# s = np.array([7,5,6,8,9,3,7,0,6,4,2,5,6,8,6])
+# print(np.sort(s))
+#
+# a = np.array(['a','f','f','t','t','e','w','s'])
+# print(np.sort(a))
+#
+# w = np.array([[2,3,5,6],[7,6,4,3],[7,4,32,2]])
+# print(np.sort(w))
+# print()
+#   # Filter ->
+#
+# m  = np.array([3,5,7,2,4,9])
+# f = [True,False,True,True,False,True]
+#
+# f_1 = m[f]
+# print(f_1)
 
-y = np.array([3,5,7,4,3,4,6,3,6,35,6,34])
-n1 = np.where( (x/2) == 3 )
-print(n1)
+   # Shuffle->
+a = np.array([3,4,5,6,7,8,9])
+np.random.shuffle(a)
+print(a)
 
-# Search sorted array->
-a = np.array([3,4,6,7,8,9,10,11,12,15,17,18,21,22])
+   # Unique->
+b = np.array([3,4,5,6,7,8,7,6,5,4,3,1])
+x = np.unique(b,return_index = True,return_counts = True)
+print(x)
 
-x1 = np.searchsorted( a, 5)
-print(x1)
+   # Resize->
+c = np.array([3,4,5,6,7,8,7,6,5,4,3,1])
+y = np.resize(c,(4,3))
+print(y)
 
-a = np.array([3,4,6,7,8,9,10,11,12,15,17,18,21,22])
+   # Flatten->
+c = np.array([3,4,5,6,7,8,7,6,5,4,3,1])
+y = np.resize(c,(4,3))
+print(y)
+print(y.flatten())
+print('Flatten',y.flatten(order='F'))
 
-x2 = np.searchsorted( a, [6,8,9],side = 'right')
-print(x2)
+   # Ravel ->
 
-# sort Array-:
-s = np.array([7,5,6,8,9,3,7,0,6,4,2,5,6,8,6])
-print(np.sort(s))
-
-a = np.array(['a','f','f','t','t','e','w','s'])
-print(np.sort(a))
-
-w = np.array([[2,3,5,6],[7,6,4,3],[7,4,32,2]])
-print(np.sort(w))
-print()
-  # Filter ->
-
-m  = np.array([3,5,7,2,4,9])
-f = [True,False,True,True,False,True]
-
-f_1 = m[f]
-print(f_1)
+c = np.array([3,4,5,6,7,8,7,6,5,4,3,1])
+y = np.resize(c,(4,3))
+print(y)
+print(y.ravel)
+print(y.ravel(order='C'))
