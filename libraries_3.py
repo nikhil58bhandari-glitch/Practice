@@ -39,33 +39,54 @@ import numpy as np
 
     # Shape & Reshaping in NumPy Array ->
 
-var = np.array([[1,2,7,6],[3,5,3,4],[76,45,53,3]])
-print(var)
-print(var.shape)
+# var = np.array([[1,2,7,6],[3,5,3,4],[76,45,53,3]])
+# print(var)
+# print(var.shape)
+#
+# var1 = np.array([2,23,4,5],ndmin = 5)
+# print(var1)
+# print(var1.shape)
+#
+# # Reshape ->
+# var2 = np.array([4,5,7,5,4,9,2,3,4,5])
+# print(var2)
+# print(var2.ndim)
+# x  = var2.reshape(5,2)
+# print(x)
+# print(x.ndim)
+#
+# var3 = np.array([4,5,7,5,4,9,2,3,4,5,11,12])
+# print(var3)
+# print(var3.ndim)
+# print()
+#
+# x1  = var3.reshape(2,3,2)
+# print(x1)
+# print(x1.ndim)
+#
+# print()
+#
+# one = x1.reshape(-1)
+# print(one)
+# print(one.ndim)
 
-var1 = np.array([2,23,4,5],ndmin = 5)
+      # * Broadcasting in NumPy Array -:
+
+var1 = np.array([1,2,3])
 print(var1)
 print(var1.shape)
-
-# Reshape ->
-var2 = np.array([4,5,7,5,4,9,2,3,4,5])
+print()
+var2 = np.array([[1],[2],[3]])
 print(var2)
-print(var2.ndim)
-x  = var2.reshape(5,2)
-print(x)
-print(x.ndim)
-
-var3 = np.array([4,5,7,5,4,9,2,3,4,5,11,12])
-print(var3)
-print(var3.ndim)
+print(var2.shape)
 print()
+# print(var1 + var2)
 
-x1  = var3.reshape(2,3,2)
-print(x1)
-print(x1.ndim)
+var3 = np.array([[2],[5]])
+print(var2)
+print(var3.shape)
 
-print()
-
-one = x1.reshape(-1)
-print(one)
-print(one.ndim)
+var4 = np.array([[4,5,7],[7,64,3]])
+print(var4)
+print(var4.shape)
+print(var3 + var4)
