@@ -72,21 +72,38 @@ import numpy as np
 
       # * Broadcasting in NumPy Array -:
 
-var1 = np.array([1,2,3])
-print(var1)
-print(var1.shape)
-print()
-var2 = np.array([[1],[2],[3]])
-print(var2)
-print(var2.shape)
-print()
-# print(var1 + var2)
+# var1 = np.array([1,2,3])
+# print(var1)
+# print(var1.shape)
+# print()
+# var2 = np.array([[1],[2],[3]])
+# print(var2)
+# print(var2.shape)
+# print()
+# # print(var1 + var2)
+#
+# var3 = np.array([[2],[5]])
+# print(var2)
+# print(var3.shape)
+#
+# var4 = np.array([[4,5,7],[7,64,3]])
+# print(var4)
+# print(var4.shape)
+# print(var3 + var4)
 
-var3 = np.array([[2],[5]])
-print(var2)
-print(var3.shape)
+    # Copy And Shape ->
 
-var4 = np.array([[4,5,7],[7,64,3]])
-print(var4)
-print(var4.shape)
-print(var3 + var4)
+var = np.array([3,5,42,5])
+co = var.copy()
+
+# var[1] = 40
+print('var : ', var)
+print('copy : ', co)
+
+print()
+
+x = np.array([7,6,4,64])
+vi = x.view()
+x[1] = 99
+print('x : ', x)
+print('vi : ', vi)
