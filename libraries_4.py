@@ -123,3 +123,4 @@ y = np.resize(c,(4,3))
 print(y)
 print(y.ravel)
 print(y.ravel(order='C'))
+
