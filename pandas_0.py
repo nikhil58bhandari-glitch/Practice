@@ -4,22 +4,44 @@ import pandas as pd
 x = [2,3,4,6,9]
 # a = pd.Series(x)
 # a = pd.Series(x,index =['a','b','c','d','e'],dtype='float')
-a = pd.Series(x,index =['a','b','c','d','e'],dtype='float', name='python')
-print(a)
-print(type(a))
-# print(a[3])
-print()
+# a = pd.Series(x,index =['a','b','c','d','e'],dtype='float', name='python')
+# print(a)
+# print(type(a))
+# # print(a[3])
+# print()
+#
+# dic = {'name':['python','c','c++','java','sql'], 'por': [12,23,34,45,56], 'rank':[1,4,3,2,5]}
+# var = pd.Series(dic)
+# print(var)
+# print()
+#
+# s = pd.Series(12, index =[1,2,3,4,5,6])
+# print(s)
+# print(type(s))
+# print()
+#
+# s = pd.Series(12, index =[1,2,3,4,5,6])
+# s1 = pd.Series(12,index=[1,2,3,4])
+# print(s+s1)
 
-dic = {'name':['python','c','c++','java','sql'], 'por': [12,23,34,45,56], 'rank':[1,4,3,2,5]}
-var = pd.Series(dic)
+# Dataframes-:
+x = [3,5,6,8,5,3]
+var = pd.DataFrame(x)
 print(var)
-print()
+print(type(var))
 
-s = pd.Series(12, index =[1,2,3,4,5,6])
-print(s)
-print(type(s))
-print()
+d = {'a': [2,3,5,6,7,3], 's':[5,4,3,2,5,4]}
+var1 = pd.DataFrame(d)
+# var1 = pd.DataFrame(d,columns=['a','b'])
+# var1 = pd.DataFrame(d,columns=['a','s'],index=['a','s','d','f','l','n'])
+print(var1)
+print(var1['a'][3])
 
-s = pd.Series(12, index =[1,2,3,4,5,6])
-s1 = pd.Series(12,index=[1,2,3,4])
-print(s+s1)
+
+list = [[2,3,4,5],[5,6,7,8],[8,7,6,5],[3,4,5,7]]
+var2 = pd.DataFrame(list)
+print(var2)
+
+sr = {'s' : pd.Series([3,4,6,5]), 'r' : pd.Series([9,7,0,9])}
+var3 = pd.DataFrame(sr)
+print(var3)
