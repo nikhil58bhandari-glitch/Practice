@@ -48,19 +48,46 @@ x = [2,3,4,6,9]
 
    # Arithmetic Operations -:
 
-var = pd.DataFrame({'A' :[1,2,3,4], 'B' :[5,6,7,8]})
+# var = pd.DataFrame({'A' :[1,2,3,4], 'B' :[5,6,7,8]})
+# print(var)
+# print()
+# # var['C'] = var['A'] + var['B']
+# # var['C'] = var['A'] - var['B']
+# # var['C'] = var['A'] * var['B']
+# var['C'] = var['A'] / var['B']
+# print(var)
+# print()
+#
+# var1 = pd.DataFrame({'A' : [3,6,9,12], 'B' : [4,8,12,16]})
+# print(var1)
+# print()
+# var1['Python'] = var1['A'] <= 10
+# var1['Python_1'] = var1['B'] <= 15
+# print(var1)
+
+    # Delete and Insert Data in Pandas->
+
+# INSERT-:
+var = pd.DataFrame({'A' : [4,6,2,7,9], 'B': [4,8,3,2,1]})
 print(var)
-print()
-# var['C'] = var['A'] + var['B']
-# var['C'] = var['A'] - var['B']
-# var['C'] = var['A'] * var['B']
-var['C'] = var['A'] / var['B']
+# var.insert(1,'python', var['A'])
+# print(var)
+#
+# var.insert(1,'python_1', [11,2,22,33,54])
+# print(var)
+
+var['pyhton_2'] = var['A'][:3]
 print(var)
 print()
 
-var1 = pd.DataFrame({'A' : [3,6,9,12], 'B' : [4,8,12,16]})
+# Delete->
+var1 = pd.DataFrame({'A' : [4,7,2,7],'B' :[6,3,7,1], 'C' : [66,41,32,36]})
 print(var1)
 print()
-var1['Python'] = var1['A'] <= 10
-var1['Python_1'] = var1['B'] <= 15
+var_1 = var1.pop('B')
+print(var_1)
+print()
+print(var1)
+
+del var['A']
 print(var1)
