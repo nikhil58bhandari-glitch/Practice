@@ -25,23 +25,42 @@ x = [2,3,4,6,9]
 # print(s+s1)
 
 # Dataframes-:
-x = [3,5,6,8,5,3]
-var = pd.DataFrame(x)
+# x = [3,5,6,8,5,3]
+# var = pd.DataFrame(x)
+# print(var)
+# print(type(var))
+#
+# d = {'a': [2,3,5,6,7,3], 's':[5,4,3,2,5,4]}
+# var1 = pd.DataFrame(d)
+# # var1 = pd.DataFrame(d,columns=['a','b'])
+# # var1 = pd.DataFrame(d,columns=['a','s'],index=['a','s','d','f','l','n'])
+# print(var1)
+# print(var1['a'][3])
+#
+#
+# list = [[2,3,4,5],[5,6,7,8],[8,7,6,5],[3,4,5,7]]
+# var2 = pd.DataFrame(list)
+# print(var2)
+
+# sr = {'s' : pd.Series([3,4,6,5]), 'r' : pd.Series([9,7,0,9])}
+# var3 = pd.DataFrame(sr)
+# print(var3)
+
+   # Arithmetic Operations -:
+
+var = pd.DataFrame({'A' :[1,2,3,4], 'B' :[5,6,7,8]})
 print(var)
-print(type(var))
+print()
+# var['C'] = var['A'] + var['B']
+# var['C'] = var['A'] - var['B']
+# var['C'] = var['A'] * var['B']
+var['C'] = var['A'] / var['B']
+print(var)
+print()
 
-d = {'a': [2,3,5,6,7,3], 's':[5,4,3,2,5,4]}
-var1 = pd.DataFrame(d)
-# var1 = pd.DataFrame(d,columns=['a','b'])
-# var1 = pd.DataFrame(d,columns=['a','s'],index=['a','s','d','f','l','n'])
+var1 = pd.DataFrame({'A' : [3,6,9,12], 'B' : [4,8,12,16]})
 print(var1)
-print(var1['a'][3])
-
-
-list = [[2,3,4,5],[5,6,7,8],[8,7,6,5],[3,4,5,7]]
-var2 = pd.DataFrame(list)
-print(var2)
-
-sr = {'s' : pd.Series([3,4,6,5]), 'r' : pd.Series([9,7,0,9])}
-var3 = pd.DataFrame(sr)
-print(var3)
+print()
+var1['Python'] = var1['A'] <= 10
+var1['Python_1'] = var1['B'] <= 15
+print(var1)
