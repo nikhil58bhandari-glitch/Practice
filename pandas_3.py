@@ -80,20 +80,20 @@ import pandas as pd
 
 # Join-:
 
-var1 = pd.DataFrame({'A': [1,2,3,4,5],'B': [11,22,33,44,55]}, index = ['a','b','c','d','e'])
-var2 = pd.DataFrame({'C': [10,20,30], 'D': [11,12,13]},index = ['a','b','c'])
-
-
-print(var1.join(var2))
-print()
-print(var2.join(var1))
-print()
-
-print(var2.join(var1,how = 'left'))
-print(var2.join(var1,how = 'right'))
-print(var2.join(var1,how = 'outer'))
-print(var2.join(var1,how = 'inner'))
-print()
+# var1 = pd.DataFrame({'A': [1,2,3,4,5],'B': [11,22,33,44,55]}, index = ['a','b','c','d','e'])
+# var2 = pd.DataFrame({'C': [10,20,30], 'D': [11,12,13]},index = ['a','b','c'])
+#
+#
+# print(var1.join(var2))
+# print()
+# print(var2.join(var1))
+# print()
+#
+# print(var2.join(var1,how = 'left'))
+# print(var2.join(var1,how = 'right'))
+# print(var2.join(var1,how = 'outer'))
+# print(var2.join(var1,how = 'inner'))
+# print()
 
 # print(var2.join(var1,how = 'inner', lsuffix='_12'))
 # print(var2.join(var1,how = 'inner', rsuffix='_12'))
@@ -102,4 +102,42 @@ print()
 
 # print(var1.append(var2))
 # print(var1.append(var2,ignore_index = True))
+
+ # Pivot Table and Melt Function-:
+
+# melt()-:
+
+var1 = pd.DataFrame({'Days':[1,2,3,4,5,6],
+                     'eng':[10,12,13,15,16,14],
+                     'maths' : [17,14,15,16,12,13]
+                     })
+
+print(var1)
+print()
+
+print(pd.melt(var1))
+print()
+
+print(pd.melt(var1,id_vars = ['eng']))
+print(pd.melt(var1,id_vars = ['eng'],var_name='python'))
+print(pd.melt(var1,id_vars = ['eng'],var_name = 'python',value_name='yoo'))
+print()
+
+# pivot()-:
+var1 = pd.DataFrame({'Days':[1,2,3,4,5,6],
+                     'st_name' :['luffy','zoro','sanji','luffy','zoro','sanji'],
+                     'eng':[10,12,13,15,16,14],
+                     'maths' : [17,14,15,16,12,13]
+                     })
+print(var1)
+print()
+
+print(var1.pivot(index = 'Days', columns = 'st_name'))
+print()
+
+print(var1.pivot(index = 'Days', columns = 'st_name',values ='eng'))
+
+print(var1.pivot_table(index = 'st_name', columns = 'days',
+                       aggfunc = 'mean', margins = 'True'))
+
 
