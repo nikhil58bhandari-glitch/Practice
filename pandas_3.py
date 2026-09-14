@@ -52,26 +52,54 @@ import pandas as pd
 #
 
    # GroupBy -: Guide to Grouping Data in Python Pandas -:
-var = pd.DataFrame({'Name' : ['a','e','b','g','c','d','b','f','c','d','e','c'],
-                    'Sub1': [11,22,33,35,11,22,34,23,55,32,43,49],
-                    'Sub2': [33,31,34,50,45,38,27,25,34,45,34,23]})
-print(var)
+# var = pd.DataFrame({'Name' : ['a','e','b','g','c','d','b','f','c','d','e','c'],
+#                     'Sub1': [11,22,33,35,11,22,34,23,55,32,43,49],
+#                     'Sub2': [33,31,34,50,45,38,27,25,34,45,34,23]})
+# print(var)
+#
+# var_new = var.groupby('Name')
+# print(var_new)
+#
+# for x,y in var_new:
+#     print(x)
+#     print(y)
+#     print()
+#
+# print(var_new.get_group('a'))
+# print(var_new.get_group('d'))
+# print()
+#
+# print(var_new.min())
+# print(var_new.max())
+# print(var_new.mean())
+#
+# li = list(var_new)
+# print(li)
 
-var_new = var.groupby('Name')
-print(var_new)
+    # join & Append DataFrame-:
 
-for x,y in var_new:
-    print(x)
-    print(y)
-    print()
+# Join-:
 
-print(var_new.get_group('a'))
-print(var_new.get_group('d'))
+var1 = pd.DataFrame({'A': [1,2,3,4,5],'B': [11,22,33,44,55]}, index = ['a','b','c','d','e'])
+var2 = pd.DataFrame({'C': [10,20,30], 'D': [11,12,13]},index = ['a','b','c'])
+
+
+print(var1.join(var2))
+print()
+print(var2.join(var1))
 print()
 
-print(var_new.min())
-print(var_new.max())
-print(var_new.mean())
+print(var2.join(var1,how = 'left'))
+print(var2.join(var1,how = 'right'))
+print(var2.join(var1,how = 'outer'))
+print(var2.join(var1,how = 'inner'))
+print()
 
-li = list(var_new)
-print(li)
+# print(var2.join(var1,how = 'inner', lsuffix='_12'))
+# print(var2.join(var1,how = 'inner', rsuffix='_12'))
+
+# Append()-:
+
+# print(var1.append(var2))
+# print(var1.append(var2,ignore_index = True))
+
